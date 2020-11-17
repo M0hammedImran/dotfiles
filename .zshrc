@@ -1,36 +1,53 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-# Path to your oh-my-zsh installation.
 export ZSH="/home/imran/.oh-my-zsh"
 
-ZSH_THEME="spaceship"
+ZSH_THEME="jnrowe"
 
-export UPDATE_ZSH_DAYS=10
-
-plugins=(git themes sudo colored-man-pages)
+export UPDATE_ZSH_DAYS=5
+DISABLE_AUTO_TITLE="true"
+ENABLE_CORRECTION="true"
+COMPLETION_WAITING_DOTS="true"
+HIST_STAMPS="dd.mm.yyyy"
+plugins=(
+        git
+        sudo 
+        colored-man-pages
+        )
 
 source $ZSH/oh-my-zsh.sh
-
-alias project="cd /mnt/m/Code/Projects"
+export LANG=en_US.UTF-8
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='code -w'
+fi
 alias rmi="rm -Rf"
 
-mdf() {
+mki() {
   mkdir $1 && cd $1/
 }
 
-alias ls="ls -Al"
+alias ls="ls -AlF --group-directories-first --hyperlink=auto"
 
 #npm specific commands
 alias run="npm run"
-alias start="npm run start"
-alias dev="npm run dev"
-#alias serve="npm run serve"
+alias start="yarn start"
+alias dev="yarn dev"
+alias build="yarn build"
 
-alias proj="cd /mnt/m/Code/Projects/"
-alias react="cd /mnt/m/Code/react/"
-alias code="code ."
+alias proj="cd /mnt/d/Projects/"
+alias react="cd /mnt/d/react/"
+alias st="cd /mnt/d/sourcetronics/"
 
+# Git Specific
+# alias gss="git status"
+# alias gaa="git add -A"
+alias gp="git push"
+# alias gpl="git pull"
+alias gcsm="git commit -m"
+
+# Ssh Specific
+alias lightsail="ssh -i /home/imran/.ssh/Sourcetronics_Dev.pem ubuntu@35.154.170.51"
+alias test_server="sudo ssh -i /home/imran/.ssh/myKey.pem ubuntu@65.0.169.11"
 ###-begin-npm-completion-###
 #
 # npm command completion script
@@ -90,4 +107,19 @@ elif type compctl &>/dev/null; then
   }
   compctl -K _npm_completion npm
 fi
+
 ###-end-npm-completion-###
+
+export PATH="$PATH:/opt/yarn-[version]/bin"
+source ~/.zplug/init.zsh
+
+zplug "geometry-zsh/geometry", as:plugin
+zplug 'zplug/zplug', hook-build:'zplug --self-manage'
+
+if ! zplug check --verbose; then
+      printf "Install? [y/N]: "
+          if read -q; then
+                    echo; zplug install
+                        fi
+fi
+zplug load
