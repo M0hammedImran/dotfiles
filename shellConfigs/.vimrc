@@ -82,3 +82,4 @@ nnoremap <Leader>- :vertical resize -5<CR>
 nnoremap <Leader>rp :resize 100<CR>
 nnoremap <Leader>pv :wincmd v <bar> :Ex <bar> :vertical resize 30<CR>
 
+

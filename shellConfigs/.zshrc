@@ -3,10 +3,15 @@ export ZSH="/home/imran/.oh-my-zsh"
 ZSH_THEME="jnrowe"
 
 export UPDATE_ZSH_DAYS=5
+
 DISABLE_AUTO_TITLE="true"
+
 ENABLE_CORRECTION="true"
+
 COMPLETION_WAITING_DOTS="true"
+
 HIST_STAMPS="dd.mm.yyyy"
+
 plugins=(
         git
         sudo 
@@ -14,19 +19,27 @@ plugins=(
         )
 
 source $ZSH/oh-my-zsh.sh
+
 export LANG=en_US.UTF-8
+
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
   export EDITOR='code -w'
 fi
-alias rmi="rm -Rf"
 
+# Functions
 mki() {
   mkdir $1 && cd $1/
 }
 
+tnew() {
+   [[ -z "$1" ]] && tmux new -s 'dev' 
+   tmux new -s $1
+}
+
 alias ls="ls -AlF --group-directories-first --hyperlink=auto"
+alias rmi="rm -Rf"
 
 #npm specific commands
 alias run="npm run"
@@ -34,20 +47,18 @@ alias start="yarn start"
 alias dev="yarn dev"
 alias build="yarn build"
 
-alias proj="cd /mnt/d/Projects/"
-alias react="cd /mnt/d/react/"
-alias st="cd /mnt/d/sourcetronics/"
+#alias proj="cd /mnt/d/Projects/"
+#alias react="cd /mnt/d/react/"
+alias st="cd /home/imran/code/sourcetronics/"
 
 # Git Specific
-# alias gss="git status"
-# alias gaa="git add -A"
 alias gp="git push"
-# alias gpl="git pull"
 alias gcsm="git commit -m"
 
-# Ssh Specific
+# ssh Specific
 alias lightsail="ssh -i /home/imran/.ssh/Sourcetronics_Dev.pem ubuntu@35.154.170.51"
 alias test_server="sudo ssh -i /home/imran/.ssh/myKey.pem ubuntu@65.0.169.11"
+
 ###-begin-npm-completion-###
 #
 # npm command completion script
