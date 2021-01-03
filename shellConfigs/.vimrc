@@ -48,6 +48,7 @@ call plug#begin('~/.vim/plugged')
  Plug 'flazz/vim-colorschemes'
  Plug 'ycm-core/YouCompleteMe'
  Plug 'leafgarland/typescript-vim'
+ Plug 'sonph/onehalf', { 'rtp': 'vim' }
 
 call plug#end()
 
@@ -58,15 +59,27 @@ endif
 
 let g:netrw_browser_split=2
 
-let g:gruvbox_contrast_dark = 'hard'
+
+"g:gruvbox_contrast_dark = 'hard'
+"if exists('+termguicolors')
+"    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+"    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+"endif
+"let g:gruvbox_invert_selection='0'
+
 if exists('+termguicolors')
-    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
 endif
-let g:gruvbox_invert_selection='0'
 
+set cursorline
 
-colorscheme gruvbox
+colorscheme onehalfdark
+
+"let g:airline_theme='onehalflight'
+let g:airline_theme='dark'
+
 set background=dark
 
 let loaded_matchparen = 1
