@@ -10,8 +10,10 @@ Host github.com
 
 # lightsail
 Host 35.154.170.51
-  IdentityFile ~/.ssh/Sourcetronics_Dev.pem
+  Preferredauthentications publickey
+  IdentityFile ~/.ssh/id_rsa.pub
+
 
 # test
-Host 52.66.211.113
-  IdentityFile /home/imran/.ssh/myKey.pem
+Host 52.66.180.208
+  IdentityFile /home/imran/.ssh/Sourcetronics_Dev.pem
