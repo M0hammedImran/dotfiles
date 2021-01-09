@@ -53,3 +53,5 @@ function rmi --wraps rm --description 'alias rmi=rm -rf'
 end
 
 starship init fish | source
+export BROWSER="/usr/bin/firefox-developer-edition"
+export EDITOR="/var/lib/snapd/snap/bin/code"
