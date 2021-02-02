@@ -22,3 +22,29 @@ Feel free to use these.😁
   - deno
 - Setup ssh-keys
 
+## Vim-Plug
+``` 
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
+## Splatmoji 
+- On Debian
+  ```
+  sudo apt-get install rofi xdotool xsel 
+  git clone https://github.com/cspeterson/splatmoji.git
+  cd /path/to/repo
+  ./splatmoji copy
+  ```
+- On Arch
+  ```
+  yay -S splatmoji-git
+  ```
+
+## VS Code
+  
+- On Arch
+  ```
+  yay -S visual-studio-code-bin
+  ```
+
