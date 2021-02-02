@@ -6,13 +6,13 @@ Feel free to use these.😁
 
 - Replace dotfiles
 - Install
-  - kitty
-  - fish
-  - vim-plug
-  - rust
-  - starship
-  - node
-  - deno
+  - Kitty
+  - Fish
+  - Vim-Plug
+  - Rust
+  - Starship
+  - Node
+  - Deno
   - VSCode
   - PostMan
   - Splatmoji
@@ -93,6 +93,38 @@ Feel free to use these.😁
 
 ## On Debian
 
+- Kitty
+
+  ```bash
+  sudo apt install kitty
+  ```
+
+- Fish
+
+  ```bash
+  sudo apt install fish
+  ```
+
+- Node
+
+  ```bash
+  sudo apt update
+
+  #for node version 14.x
+  curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+  sudo apt-get install -y nodejs
+
+  #for node version 12.x
+  curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+  sudo apt-get install -y nodejs
+  ```
+
+- PostMan
+
+  ```bash
+  sudo snap install postman
+  ```
+
 - VS Code
 
   ```bash
@@ -102,8 +134,15 @@ Feel free to use these.😁
 - Splatmoji
 
   ```bash
-    sudo apt-get install rofi xdotool xsel
-    git clone https://github.com/cspeterson/splatmoji.git
-    cd /path/to/repo
-    ./splatmoji copy
+  sudo apt-get install rofi xdotool xsel
+  git clone https://github.com/cspeterson/splatmoji.git
+  cd /path/to/repo
+  ./splatmoji copy
   ```
+
+## Nerd Fonts
+
+- [GitHub Link](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts)
+  - [Fira Code (.zip)](https://github.com/tonsky/FiraCode/releases/download/5.2/Fira_Code_v5.2.zip)
+  - [IBMPlexMono (.zip)](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/IBMPlexMono.zip)
+  - [JetBrainsMono (.zip)](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrainsMono.zip)
