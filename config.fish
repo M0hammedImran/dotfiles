@@ -18,7 +18,6 @@ alias gp="git push"
 alias gcsm="git commit -m"
 
 alias lightsail="ssh -i /home/imran/.ssh/Sourcetronics_Dev.pem ubuntu@35.154.170.51"
-# alias lightsail="ssh  imran@35.154.170.51"
 alias liveserver="ssh -i ~/.ssh/Sourcetronics_Dev.pem  ubuntu@52.66.180.208"
 alias vconf="vim ~/.vimrc"
 alias fconf="vim ~/.config/fish/config.fish"
@@ -53,5 +52,5 @@ function rmi --wraps rm --description 'alias rmi=rm -rf'
 end
 
 starship init fish | source
-export BROWSER="/usr/bin/firefox-developer-edition"
-export EDITOR="/var/lib/snapd/snap/bin/code"
+export DENO_INSTALL="/home/imran/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
