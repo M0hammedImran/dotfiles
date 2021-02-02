@@ -61,7 +61,7 @@ Feel free to use these.😁
   sudo pacman -S kitty
   ```
 
-- fish
+- Fish
 
   ```Arch
   sudo pacman -S fish
