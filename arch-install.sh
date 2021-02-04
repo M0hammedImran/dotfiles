@@ -9,10 +9,10 @@ sudo pacman -Syyu
 
 echo "
 ==================================================================
-Installing Kitty, Fish, Nodejs 14.x, exa, bat, base-devel & cmake
+Installing Kitty, Fish, brave, Nodejs 14.x, exa, bat, base-devel & cmake
 ==================================================================
 "
-sudo pacman -S kitty fish nodejs-lts-fermium npm base-devel cmake exa bat
+sudo pacman -S kitty fish nodejs-lts-fermium npm brave base-devel cmake exa bat
 
 echo "
 ======================================
@@ -45,9 +45,9 @@ curl -fsSL https://deno.land/x/install/install.sh | sh
 
 
 echo "
-================
+====================
 Setting up symlinks
-================
+====================
 "
 ln -s ~/dotfiles/config.fish ~/.config/fish/config.fish
 ln -s ~/dotfiles/.vimrc ~/.vimrc
