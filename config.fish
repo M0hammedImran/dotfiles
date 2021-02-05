@@ -2,11 +2,8 @@
 alias ll="exa -la --group-directories-first"
 alias la="exa -la --group-directories-first"
 alias ls="exa -la --group-directories-first"
+alias ...="cd ../.."
 
-alias gss="git status"
-alias gaa="git add --all"
-alias gcsm="git commit -s -m"
-alias gpsh="git push"
 
 alias rmi="rm -Rf"
 
@@ -17,7 +14,7 @@ alias build="yarn build"
 alias gss="git status"
 alias gaa="git add ."
 alias gp="git push"
-alias gcsm="git commit -m"
+alias gcsm="git commit -s -m"
 
 alias lightsail="ssh -i /home/imran/.ssh/Sourcetronics_Dev.pem ubuntu@35.154.170.51"
 alias liveserver="ssh -i ~/.ssh/Sourcetronics_Dev.pem  ubuntu@52.66.180.208"
