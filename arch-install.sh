@@ -8,9 +8,9 @@ Checking For Updates if any.
 sudo pacman -Syyu
 
 echo "
-==============================================================================
-Installing Kitty, Fish, brave, Nodejs 14.x, exa, bat, yay, base-devel & cmake
-==============================================================================
+=========================================================================================
+Installing Kitty, Fish, brave, Nodejs 14.x, npm, yarn, exa, bat, yay, base-devel & cmake
+=========================================================================================
 "
 sudo pacman -S kitty fish nodejs-lts-fermium npm brave base-devel cmake exa bat yay
 
