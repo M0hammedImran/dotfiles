@@ -122,15 +122,3 @@ fi
 ###-end-npm-completion-###
 
 export PATH="$PATH:/opt/yarn-[version]/bin"
-source ~/.zplug/init.zsh
-
-zplug "geometry-zsh/geometry", as:plugin
-zplug 'zplug/zplug', hook-build:'zplug --self-manage'
-
-if ! zplug check --verbose; then
-      printf "Install? [y/N]: "
-          if read -q; then
-                    echo; zplug install
-                        fi
-fi
-zplug load
