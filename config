@@ -11,7 +11,7 @@ Host github.com
 # lightsail
 Host 35.154.170.51
   Preferredauthentications publickey
-  IdentityFile ~/.ssh/id_rsa.pub
+  IdentityFile ~/.ssh/id_rsa
 
 
 # test
