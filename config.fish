@@ -1,7 +1,7 @@
 #Aliases
-alias ll="exa -la --group-directories-first"
-alias la="exa -la --group-directories-first"
-alias ls="exa -la --group-directories-first"
+alias ll="lsd -la --group-dirs=first"
+alias la="lsd -la --group-dirs=first"
+alias ls="lsd -la --group-dirs=first"
 alias ...="cd ../.."
 
 
