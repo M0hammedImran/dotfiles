@@ -3,3 +3,5 @@
 	name = Mohammed Imran
 [init]
 	defaultBranch = main
+[pull]
+	ff = only
