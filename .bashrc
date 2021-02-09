@@ -1,4 +1,4 @@
-# Instagram: https://instagram.com/m0hd_imran
+# Instagram: https://instagram.com/m0hammedimran
 # My bash config (Git bash). Not much to see here.  Some pretty standard stuff.
 
 # Generic Aliases
