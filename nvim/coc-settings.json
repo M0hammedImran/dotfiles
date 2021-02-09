@@ -1,0 +1,8 @@
+{
+  "coc.source.emoji.filetypes": ["markdown"],
+  "coc.source.emoji.triggerCharacters": ["TRIGGERCHAR"],
+  "eslint.alwaysShowStatus": true,
+  "eslint.autoFixOnSave": true,
+  "eslint.format.enable": true,
+  "cSpell.language": "en"
+}
