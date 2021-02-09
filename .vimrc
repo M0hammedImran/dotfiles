@@ -45,6 +45,7 @@ call plug#begin('~/.vim/plugged')
  Plug 'vim-airline/vim-airline'
  Plug 'flazz/vim-colorschemes'
  Plug 'ycm-core/YouCompleteMe'
+ Plug 'preservim/nerdtree'
  Plug 'leafgarland/typescript-vim'
  Plug 'dracula/vim', { 'as': 'dracula' }
 
@@ -83,4 +84,7 @@ nnoremap <Leader>+ :vertical resize +5<CR>
 nnoremap <Leader>- :vertical resize -5<CR>
 nnoremap <Leader>rp :resize 100<CR>
 nnoremap <Leader>pv :wincmd v <bar> :Ex <bar> :vertical resize 30<CR>
-
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
