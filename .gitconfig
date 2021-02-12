@@ -4,4 +4,4 @@
 [init]
 	defaultBranch = main
 [pull]
-	ff = only
+	resolve = only
