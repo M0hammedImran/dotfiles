@@ -2,29 +2,34 @@
 alias ll="lsd -la --group-dirs=first"
 alias la="lsd -la --group-dirs=first"
 alias ls="lsd -la --group-dirs=first"
-alias ...="cd ../.."
 
+abbr -a -g ... "cd ../.."
 
-alias rmi="rm -Rf"
+abbr -a -g vim 'nvim'
 
-alias start="yarn start"
-alias dev="yarn dev"
-alias build="yarn build"
+abbr -a -g rmi "rm -Rf"
 
-alias gss="git status"
-alias gaa="git add ."
-alias gp="git push"
-alias gcsm="git commit -s -m"
+abbr -a -g start "yarn start"
+abbr -a -g dev "yarn dev"
+abbr -a -g build "yarn build"
 
-alias lightsail="ssh -i /home/imran/.ssh/Sourcetronics_Dev.pem ubuntu@35.154.170.51"
-alias liveserver="ssh -i ~/.ssh/Sourcetronics_Dev.pem  ubuntu@52.66.180.208"
+abbr -a -g gss "git status"
+abbr -a -g gaa "git add ."
+abbr -a -g gp "git push"
+abbr -a -g gcsm "git commit -s -m"
 
-alias vconf="vim ~/.vimrc"
-alias fconf="vim ~/.config/fish/config.fish"
-alias zconf="vim ~/.zshrc"
-alias aconf="vim ~/.alacritty.yml"
-alias kconf="vim ~/.config/kitty/kitty.conf"
-alias fsource="source ~/.config/fish/config.fish"
+abbr -a -g lightsail "ssh -i /home/imran/.ssh/Sourcetronics_Dev.pem ubuntu@35.154.170.51"
+abbr -a -g liveserver "ssh -i ~/.ssh/Sourcetronics_Dev.pem  ubuntu@52.66.180.208"
+
+abbr -a -g vconf "vim ~/.vimrc"
+abbr -a -g fconf "vim ~/.config/fish/config.fish"
+abbr -a -g zconf "vim ~/.zshrc"
+abbr -a -g aconf "vim ~/.alacritty.yml"
+abbr -a -g kconf "vim ~/.config/kitty/kitty.conf"
+
+abbr -a -g fsource "source ~/.config/fish/config.fish"
+
+abbr -a -g update "sudo apt update && sudo apt upgrade"
 
 function st 
     cd ~/code/sourcetronics/ ; 
