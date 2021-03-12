@@ -61,3 +61,4 @@ end
 starship init fish | source
 export DENO_INSTALL="/home/imran/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
+export BW_SESSION="kBnDZCHlmLwN1dQ4YgHVMSSUM455bmxiitoMLFTMzGFnVkuvc7rQJhCJHPj4nFAoWN/QAmVB62No9ubCdAwTaw=="
