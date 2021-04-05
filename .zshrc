@@ -1,3 +1,7 @@
+export ZSH="/home/imran/.oh-my-zsh"
+
+ZSH_THEME="jnrowe"
+
 export UPDATE_ZSH_DAYS=5
 
 DISABLE_AUTO_TITLE="true"
@@ -7,6 +11,17 @@ ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 
 HIST_STAMPS="dd.mm.yyyy"
+
+plugins=(
+        git
+        sudo 
+        colored-man-pages
+        zsh-autosuggestions 
+        history-substring-search 
+        zsh-syntax-highlighting
+      )
+
+source $ZSH/oh-my-zsh.sh
 
 export LANG=en_US.UTF-8
 
@@ -26,25 +41,26 @@ tnew() {
    tmux new -s $1
 }
 
-alias ls="ls -AlF --group-directories-first --hyperlink=auto"
+alias ll="exa -la --git --group-directories-first"
+alias la="exa -la --git --group-directories-first"
+alias ls="exa -la --git --group-directories-first"
 alias rmi="rm -Rf"
 
 #npm specific commands
-alias run="npm run"
 alias start="yarn start"
 alias dev="yarn dev"
 alias build="yarn build"
 
-alias st="cd /home/imran/code/sourcetronics/"
-
-# Git Specific
 alias gp="git push"
 alias gcsm="git commit -m"
+alias gaa="git add ."
+alias gss="git status"
 
 # ssh Specific
 alias lightsail="ssh -i /home/imran/.ssh/Sourcetronics_Dev.pem ubuntu@35.154.170.51"
-alias test_server="sudo ssh -i /home/imran/.ssh/myKey.pem ubuntu@65.0.169.11"
+alias liveserver="ssh -i ~/.ssh/Sourcetronics_Dev.pem  ubuntu@52.66.180.208"
 
+alias update='sudo apt update && sudo apt upgrade'
 ###-begin-npm-completion-###
 #
 # npm command completion script
