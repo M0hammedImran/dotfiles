@@ -1,7 +1,3 @@
-export ZSH="/home/imran/.oh-my-zsh"
-
-ZSH_THEME="jnrowe"
-
 export UPDATE_ZSH_DAYS=5
 
 DISABLE_AUTO_TITLE="true"
@@ -11,14 +7,6 @@ ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 
 HIST_STAMPS="dd.mm.yyyy"
-
-plugins=(
-        git
-        sudo 
-        colored-man-pages
-        )
-
-source $ZSH/oh-my-zsh.sh
 
 export LANG=en_US.UTF-8
 
@@ -47,8 +35,6 @@ alias start="yarn start"
 alias dev="yarn dev"
 alias build="yarn build"
 
-#alias proj="cd /mnt/d/Projects/"
-#alias react="cd /mnt/d/react/"
 alias st="cd /home/imran/code/sourcetronics/"
 
 # Git Specific
@@ -122,3 +108,5 @@ fi
 ###-end-npm-completion-###
 
 export PATH="$PATH:/opt/yarn-[version]/bin"
+eval "$(starship init zsh)"
+
