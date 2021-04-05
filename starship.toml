@@ -39,7 +39,7 @@ format = "via [🐋 $context](blue bold)"
 
 [time]
 disabled = false
-format = '🕙[\[ $time \]]($style)' 
+format = '🕙 [\[ $time \]]($style)' 
 time_format = "%T"
 utc_time_offset = "+5.50"
 time_range = "00:00:00-23:59:59"
