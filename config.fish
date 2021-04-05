@@ -1,7 +1,7 @@
 #Aliases
-alias ll="exa -la --group-directories-first"
-alias la="exa -la --group-directories-first"
-alias ls="exa -la --group-directories-first"
+alias ll="exa -la --group-directories-first --git"
+alias la="exa -la --group-directories-first --git"
+alias ls="exa -la --group-directories-first --git"
 
 abbr -a -g ... "cd ../.."
 
