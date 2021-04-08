@@ -18,8 +18,8 @@ abbr -a -g gaa "git add ."
 abbr -a -g gp "git push"
 abbr -a -g gcsm "git commit -s -m"
 
-abbr -a -g lightsail "ssh -i /home/imran/.ssh/Sourcetronics_Dev.pem ubuntu@35.154.170.51"
-abbr -a -g liveserver "ssh -i ~/.ssh/Sourcetronics_Dev.pem  ubuntu@52.66.180.208"
+abbr -a -g lightsail "ssh ubuntu@35.154.170.51"
+abbr -a -g liveserver "ssh ubuntu@52.66.180.208"
 
 abbr -a -g vconf "vim ~/.vimrc"
 abbr -a -g fconf "vim ~/.config/fish/config.fish"
