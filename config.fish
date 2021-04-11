@@ -29,7 +29,11 @@ abbr -a -g kconf "vim ~/.config/kitty/kitty.conf"
 
 abbr -a -g fsource "source ~/.config/fish/config.fish"
 
-abbr -a -g update "sudo apt update && sudo apt upgrade"
+# for apt
+#abbr -a -g update "sudo apt update && sudo apt upgrade"
+
+# for dnf
+abbr -a -g update "sudo dnf check-update && sudo dnf upgrade"
 
 function st 
     cd ~/code/sourcetronics/ ; 
