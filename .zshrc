@@ -1,7 +1,3 @@
-export ZSH="/home/imran/.oh-my-zsh"
-
-ZSH_THEME="jnrowe"
-
 export UPDATE_ZSH_DAYS=5
 
 DISABLE_AUTO_TITLE="true"
@@ -11,17 +7,6 @@ ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 
 HIST_STAMPS="dd.mm.yyyy"
-
-plugins=(
-        git
-        sudo 
-        colored-man-pages
-        zsh-autosuggestions 
-        history-substring-search 
-        zsh-syntax-highlighting
-      )
-
-source $ZSH/oh-my-zsh.sh
 
 export LANG=en_US.UTF-8
 
