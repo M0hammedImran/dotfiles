@@ -49,6 +49,11 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'tpope/vim-rhubarb'
     Plug 'junegunn/gv.vim'
     Plug 'rhysd/git-messenger.vim'
+    Plug 'MaxMEllon/vim-jsx-pretty'
+    Plug 'pangloss/vim-javascript'
+    Plug 'leafgarland/typescript-vim'
+    Plug 'peitalin/vim-jsx-typescript'
+    Plug 'styled-components/vim-styled-components'
 
     " See what keys do like in emacs
     Plug 'liuchengxu/vim-which-key'
