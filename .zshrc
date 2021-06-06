@@ -1,5 +1,5 @@
 export UPDATE_ZSH_DAYS=5
-
+export SHELL='/usr/bin/zsh'
 DISABLE_AUTO_TITLE="true"
 
 ENABLE_CORRECTION="true"
@@ -30,7 +30,7 @@ alias ll="exa -la --git --group-directories-first"
 alias la="exa -la --git --group-directories-first"
 alias ls="exa -la --git --group-directories-first"
 alias rmi="rm -Rf"
-
+alias protoezy="cd ~/Code/react/sourcetronics.git/release-1"
 #npm specific commands
 alias start="yarn start"
 alias dev="yarn dev"
@@ -42,8 +42,8 @@ alias gaa="git add ."
 alias gss="git status"
 
 # ssh Specific
-alias lightsail="ssh -i /home/imran/.ssh/Sourcetronics_Dev.pem ubuntu@35.154.170.51"
-alias liveserver="ssh -i ~/.ssh/Sourcetronics_Dev.pem  ubuntu@52.66.180.208"
+alias lightsail="ssh ubuntu@35.154.170.51"
+alias liveserver="ssh ubuntu@3.7.223.218"
 
 alias update='sudo apt update && sudo apt upgrade'
 ###-begin-npm-completion-###
@@ -110,4 +110,6 @@ fi
 
 export PATH="$PATH:/opt/yarn-[version]/bin"
 eval "$(starship init zsh)"
+fpath=(~/.zsh/completion $fpath)
+
 
