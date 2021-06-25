@@ -1,97 +1,87 @@
 #!/bin/bash
+
 echo "
 ====================
 Setting up symlinks
 ====================
 "
-folder=$HOME/.dotfiles 
-fish_config=$HOME/.config/fish/config.fish
-kitty_config=$HOME/.config/kitty/kitty.conf 
-starship_config=$HOME/.config/starship.toml 
-ssh_config=$HOME/.ssh/config
+SOURCE_FOLDER=$HOME/.dotfiles 
+CONFIG_FOLDER=$HOME/.config
 
-for file in ".bashrc" ".zshrc" ".vimrc" ".gitconfig"
+FISH_FOLDER=$CONFIG_FOLDER/fish
+KITTY_FOLDER=$CONFIG_FOLDER/kitty
+SSH_FOLDER=$HOME/.ssh
+
+FISH_CONFIG=$FISH_FOLDER/config.fish
+KITTY_CONFIG=$KITTY_FOLDER/kitty.conf 
+STARSHIP_CONFIG=$CONFIG_FOLDER/starship.toml 
+SSH_CONFIG=$SSH_FOLDER/config
+ZSH_FOLDER=$CONFIG_FOLDER/zsh
+
+for file in ".bashrc" ".vimrc" ".gitconfig" ".zshenv"
 do 
   if [ -f "$HOME/$file" ]; then
     rm "$HOME/$file"
-    ln -s "$folder/$file" "$HOME/$file"
+    ln -s "$SOURCE_FOLDER/$file" "$HOME/$file"
     echo "Successfully setup $file"
   else 
-    file_path=(`find $folder -name $file`)
-    if [ ! -z $file_path ];then
-      ln -s "$folder/$file" "$HOME/$file"
+    FILE_PATH=(`find $SOURCE_FOLDER -name $file`)
+    if [ ! -z $FILE_PATH ]; then
+      ln -s "$SOURCE_FOLDER/$file" "$HOME/$file"
       echo "Successfully setup $file"
     fi
   fi
 done
 
-if [ ! -d ~/.config/fish/ ]; then
-  mkdir -p ~/.config/fish
-  if [ -f "$fish_config" ]; then
-    rm "$fish_config"
-    ln -s ~/.dotfiles/config.fish  "$fish_config"
-    echo "Successfully setup $fish_config"
-  else
-    ln -s ~/.dotfiles/config.fish "$fish_config"
-    echo "Successfully setup $fish_config"
-  fi
+# * FISH CONFIG
+if [ ! -d "$FISH_FOLDER" ]; then
+  mkdir -p $FISH_FOLDER
+fi
+
+if [ -f "$FISH_CONFIG" ]; then
+  rm "$FISH_CONFIG"
+fi
+
+echo "Successfully setup $FISH_CONFIG"
+ln -s $SOURCE_FOLDER/config.fish "$FISH_CONFIG"
+
+# * KITTY CONFIG
+if [ ! -d "$KITTY_FOLDER" ]; then
+  mkdir -p $KITTY_FOLDER
+fi
+
+if [ -f "$KITTY_CONFIG" ]; then
+  rm "$KITTY_CONFIG"
+fi
+
+echo "Successfully setup $KITTY_CONFIG"
+ln -s $SOURCE_FOLDER/kitty.conf "$KITTY_CONFIG"
+
+# * SSH CONFIG
+if [ ! -d "$SSH_FOLDER" ]; then
+  mkdir -p $SSH_FOLDER
+fi
+
+if [ -f "$SSH_CONFIG" ]; then
+  rm "$SSH_CONFIG"
+fi
+
+echo "Successfully setup $SSH_CONFIG"
+ln -s $SOURCE_FOLDER/config "$SSH_CONFIG"
+
+# * ZSH CONFIG
+if [ ! -d "$ZSH_FOLDER" ]; then
+  mkdir -p $ZSH_FOLDER
 else
-  if [ -f "$fish_config" ]; then
-    rm "$fish_config"
-    ln -s ~/.dotfiles/config.fish  "$fish_config"
-    echo "Successfully setup $fish_config"
-  else
-    ln -s ~/.dotfiles/config.fish "$fish_config"
-    echo "Successfully setup $fish_config"
-  fi
+  rm -rf $ZSH_FOLDER
 fi
 
-if [ ! -d ~/.config/kitty/ ]; then
-  mkdir ~/.config/kitty 
-  if [ -f "$kitty_config" ]; then
-    rm "$kitty_config"
-    ln -s ~/.dotfiles/kitty.conf "$kitty_config"
-    echo "Successfully setup $kitty_config"
-  else
-    ln -s ~/.dotfiles/kitty.conf "$kitty_config"
-    echo "Successfully setup $kitty_config"
-  fi
-else 
-  if [ -f "$kitty_config" ]; then
-    rm "$kitty_config"
-    ln -s ~/.dotfiles/kitty.conf "$kitty_config"
-    echo "Successfully setup $kitty_config"
-  else
-    ln -s ~/.dotfiles/kitty.conf "$kitty_config"
-    echo "Successfully setup $kitty_config"
-  fi
+echo "Successfully setup $ZSH_FOLDER"
+ln -s $SOURCE_FOLDER/zshrc "$ZSH_FOLDER"
+
+if [ -f "$STARSHIP_CONFIG" ]; then 
+  rm $STARSHIP_CONFIG 
 fi
 
-if [ ! -d ~/.ssh ]; then
-  mkdir ~/.ssh 
-  if [ -f "$ssh_config" ]; then 
-   rm "$ssh_config"
-   ln -s "$folder"/config "$ssh_config"
-   echo "Successfully setup $ssh_config"
-  else 
-   ln -s "$folder"/config "$ssh_config"
-   echo "Successfully setup $ssh_config"
-  fi
-else 
-  if [ -f "$ssh_config" ]; then 
-   rm "$ssh_config"
-   ln -s "$folder"/config "$ssh_config"
-   echo "Successfully setup $ssh_config"
-  else 
-   ln -s "$folder"/config "$ssh_config"
-   echo "Successfully setup $ssh_config"
-  fi
-fi
-
-if [ -f "$starship_config" ]; then 
-  rm "$starship_config" && ln -s "$folder"/starship.toml "$starship_config"
-  echo "Successfully setup $starship_config"
-else 
-  ln -s "$folder"/starship.toml ~/.config/starship.toml
-  echo "Successfully setup $starship_config"
-fi
+ln -s $SOURCE_FOLDER/starship.toml $CONFIG_FOLDER/starship.toml
+echo "Successfully setup $STARSHIP_CONFIG"
