@@ -2,20 +2,23 @@ module.exports = {
     config: {
         updateChannel: 'stable',
         fontSize: 12,
-        fontFamily: '"Cascadia Code", "JetBrainsMono NF", monospace',
+        fontFamily: 'monospace',
         fontWeight: 'normal',
         fontWeightBold: 'bold',
         lineHeight: 1,
         letterSpacing: 0,
         cursorColor: 'rgba(248,28,229,0.8)',
         cursorAccentColor: '#000',
-        cursorShape: 'BLOCK',
+        cursorShape: 'block',
         cursorBlink: true,
         foregroundColor: '#fff',
         backgroundColor: '#000',
         selectionColor: 'rgba(248,28,229,0.3)',
         borderColor: '#333',
         css: '',
+        windowWidth: 1000,
+        windowHeight: 500,
+
         termCSS: '',
         showHamburgerMenu: '',
         showWindowControls: '',
@@ -38,8 +41,8 @@ module.exports = {
             lightCyan: '#68FDFE',
             lightWhite: '#FFFFFF',
         },
-        shell: '/usr/bin/fish',
-        shellArgs: ['--login'],
+        shell: '/usr/bin/zsh',
+        shellArgs: [],
         env: {},
         bell: false,
         copyOnSelect: false,
@@ -47,18 +50,16 @@ module.exports = {
         quickEdit: false,
         macOptionSelectionMode: 'vertical',
         webGLRenderer: true,
+        titleBarStyle: 'hidden',
     },
-
     plugins: [
-        'hyper-lighthaus',
-        'hypercwd',
-        'hyper-startup',
+        'hyperminimal', // remove titlebar
+        'hyper-dracula',
+        'hypercwd', // Open new tabs with PWD
         'hyper-tab-icons',
-        'hyperpower',
-        'git-falcon9',
+        'hyperpower', // Sparkle effect
     ],
     localPlugins: [],
-
     keymaps: {
         'window:devtools': 'cmd+alt+o',
     },
