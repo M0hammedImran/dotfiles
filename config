@@ -11,10 +11,13 @@ Host github.com
 # lightsail
 Host 35.154.170.51
   Preferredauthentications publickey
-  IdentityFile ~/.ssh/Sourcetronics_Dev.pem
-
+  IdentityFile ~/.ssh/test_sourcetronics_live.pem
 
 # protoezy.com
 Host 3.7.223.218
   Preferredauthentications publickey
-  IdentityFile ~/.ssh/Sourcetronics_Dev.pem
+  IdentityFile ~/.ssh/protoezy_com.pem
+
+Host 13.235.33.190
+  Preferredauthentications publickey
+  IdentityFile ~/.ssh/hijab_store_test.pem

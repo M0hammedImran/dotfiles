@@ -25,7 +25,7 @@ set colorcolumn=80
 highlight ColorCloumn ctermbg=0 guibg=lightgrey
 
 set scrolloff=8
-set mouse=a
+" set mouse=a
 
 " Give more space for displaying messages.
 set cmdheight=2

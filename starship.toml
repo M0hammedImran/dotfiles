@@ -1,15 +1,13 @@
 format = """
-$username\
 $directory\
 $git_branch\
 $git_commit\
 $git_state\
 $git_status\
 $rust\
+$golang\
 $package\
 $docker_context\
-$nodejs\
-$aws\
 $line_break\
 $battery\
 $time\
@@ -19,14 +17,14 @@ $character
 
 [git_status]
 conflicted = "🏳 "
-ahead = "🏎 💨"
-behind = "😰"
-diverged = "😵"
-untracked = "🤷"
-stashed = "📦"
-modified = "📝"
+ahead = "🏎 💨 "
+behind = "😰 "
+diverged = "😵 "
+untracked = "🤷 "
+stashed = "📦 "
+modified = "📝 "
 staged = '[++\($count\)](green)'
-renamed = "👅"
+renamed = "👅 "
 deleted = "🗑 "
 
 # Replace the "❯" symbol in the prompt with "➜"
@@ -45,18 +43,25 @@ utc_time_offset = "+5.50"
 time_range = "00:00:00-23:59:59"
 
 [battery]
-full_symbol = "🔋"
+disabled = false
+full_symbol = "🔋 "
 charging_symbol = "⚡️"
-discharging_symbol = "💀"
+discharging_symbol = "💀 "
 
 [git_branch]
+disabled = false
 symbol = "🌱 "
 
 [git_commit]
+disabled = false
 commit_hash_length = 4
 tag_symbol = "🔖 "
 
 [git_state]
+disabled = false
 format = '[\($state( $progress_current of $progress_total)\)]($style) '
 cherry_pick = "[🍒 PICKING](bold red)"
 
+[golang]
+disabled = false
+format = "via [🏎💨 $version](bold cyan) "
