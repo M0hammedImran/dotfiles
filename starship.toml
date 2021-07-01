@@ -8,28 +8,34 @@ $rust\
 $golang\
 $package\
 $docker_context\
+$cmd_duration\
 $line_break\
 $battery\
 $time\
 $status\
 $character
 """
+command_timeout = 1000
 
 [git_status]
 conflicted = "🏳 "
-ahead = "🏎 💨 "
-behind = "😰 "
-diverged = "😵 "
 untracked = "🤷 "
 stashed = "📦 "
 modified = "📝 "
 staged = '[++\($count\)](green)'
 renamed = "👅 "
 deleted = "🗑 "
+ahead = "⇡${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+behind = "⇣${count}"
 
 # Replace the "❯" symbol in the prompt with "➜"
 [character]                            # The name of the module we are configuring is "character"
 success_symbol = "[➜](bold green)"     # The "success_symbol" segment is being set to "➜" with the color "bold green"
+
+[cmd_duration]
+min_time = 500
+format = "took [$duration](blue bold) "
 
 [docker_context]
 disabled = false
@@ -37,25 +43,25 @@ format = "via [🐋 $context](blue bold)"
 
 [time]
 disabled = false
-format = '🕙 [\[ $time \]]($style)' 
+format = '🕙 [\[ $time \]](blue bold)' 
 time_format = "%T"
 utc_time_offset = "+5.50"
 time_range = "00:00:00-23:59:59"
 
 [battery]
 disabled = false
-full_symbol = "🔋 "
-charging_symbol = "⚡️"
-discharging_symbol = "💀 "
+full_symbol = "🔋  "
+charging_symbol = "⚡️  "
+discharging_symbol = "💀  "
 
 [git_branch]
 disabled = false
-symbol = "🌱 "
+symbol = "🌱  "
 
 [git_commit]
 disabled = false
 commit_hash_length = 4
-tag_symbol = "🔖 "
+tag_symbol = "🔖  "
 
 [git_state]
 disabled = false
@@ -65,3 +71,4 @@ cherry_pick = "[🍒 PICKING](bold red)"
 [golang]
 disabled = false
 format = "via [🏎💨 $version](bold cyan) "
+
