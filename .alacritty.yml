@@ -25,26 +25,26 @@ scrolling:
 font:
   # Normal (roman) font face
   normal:
-    family: Fira Mono
+    family: JetBrains Mono
     style: Regular
 
   # Bold font face
   bold:
-    family: Fira Mono
+    family: JetBrains Mono
     style: Bold
 
   # Italic font face
   italic:
-    family: Fira Mono
+    family: JetBrains Mono
     style: Italic
 
   # Bold italic font face
   bold_italic:
-    family: Fira Mono
+    family: JetBrains Mono
     style: Bold Italic
 
   # Point size
-  size: 11.0
+  size: 10.0
 
 # Lighthaus Color theme for Alacritty
 # GIT: https://github.com/lighthaus-theme/alacritty
@@ -173,7 +173,7 @@ selection:
 style: Bloc
 
 shell:
-  program: /usr/bin/zsh
+  program: /bin/fish
 
   url:
     Default:
