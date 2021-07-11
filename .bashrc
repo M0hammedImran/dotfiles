@@ -30,3 +30,4 @@ alias create-react-app="npx create-react-app "
 source "$HOME/.cargo/env"
 eval "$(starship init bash)"
 
+. "$HOME/.cargo/env"

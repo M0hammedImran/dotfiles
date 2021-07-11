@@ -2,6 +2,7 @@
 alias ll="exa -la --group-directories-first --git"
 alias la="exa -la --group-directories-first --git"
 alias ls="exa -la --group-directories-first --git"
+alias c="clear"
 
 abbr -a -g ... "cd ../.."
 
@@ -19,7 +20,7 @@ abbr -a -g gp "git push"
 abbr -a -g gcsm "git commit -s -m"
 
 abbr -a -g lightsail "ssh ubuntu@35.154.170.51"
-abbr -a -g liveserver "ssh ubuntu@52.66.180.208"
+abbr -a -g liveserver "ssh ubuntu@3.7.223.218"
 
 abbr -a -g vconf "vim ~/.vimrc"
 abbr -a -g fconf "vim ~/.config/fish/config.fish"
@@ -62,7 +63,10 @@ function rmi --wraps rm --description 'alias rmi=rm -rf'
     rm -rf $argv
 end
 
-starship init fish | source
+#starship init fish | source
 export DENO_INSTALL="/home/imran/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 export BW_SESSION="kBnDZCHlmLwN1dQ4YgHVMSSUM455bmxiitoMLFTMzGFnVkuvc7rQJhCJHPj4nFAoWN/QAmVB62No9ubCdAwTaw=="
+set -Up fish_user_paths ~/.cargo/bin
+set -g theme_short_path yes
+
