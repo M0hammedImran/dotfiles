@@ -31,10 +31,10 @@ abbr -a -g kconf "vim ~/.config/kitty/kitty.conf"
 abbr -a -g fsource "source ~/.config/fish/config.fish"
 
 # for apt
-#abbr -a -g update "sudo apt update && sudo apt upgrade"
+abbr -a -g update "sudo apt update && sudo apt upgrade"
 
 # for dnf
-abbr -a -g update "sudo dnf check-update && sudo dnf upgrade"
+#abbr -a -g update "sudo dnf check-update && sudo dnf upgrade"
 
 function st 
     cd ~/code/sourcetronics/ ; 
@@ -63,10 +63,8 @@ function rmi --wraps rm --description 'alias rmi=rm -rf'
     rm -rf $argv
 end
 
-#starship init fish | source
 export DENO_INSTALL="/home/imran/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
-export BW_SESSION="kBnDZCHlmLwN1dQ4YgHVMSSUM455bmxiitoMLFTMzGFnVkuvc7rQJhCJHPj4nFAoWN/QAmVB62No9ubCdAwTaw=="
 set -Up fish_user_paths ~/.cargo/bin
 set -g theme_short_path yes
-
+set -U fish_greeting

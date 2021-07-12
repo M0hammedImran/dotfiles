@@ -3,7 +3,7 @@
 
 # Generic Aliases
 alias rmi="rm -Rf"
-alias ls="ls -l"
+alias ls="ls -l --group-directories-first --color=auto"
 alias la="ls -AlF --group-directories-first --color=auto"
 alias ..="cd .."
 alias ...="cd ../.."
@@ -16,18 +16,6 @@ alias gaa="git add -A"
 alias gcsm="git commit -m"
 alias gp="git push"
 
-# NPM Specific Aliases 
-alias run="npm run"
-alias start="npm run start"
-alias build="npm run build"
-alias nserve="npm run serve"
-
 # Firebase Aliases
 alias fd="firebase deploy"
-
-alias create-react-app="npx create-react-app "
-
 source "$HOME/.cargo/env"
-eval "$(starship init bash)"
-
-. "$HOME/.cargo/env"

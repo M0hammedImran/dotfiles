@@ -5,7 +5,7 @@ echo "
 Setting up symlinks
 ====================
 "
-SOURCE_FOLDER=$HOME/.dotfiles 
+SOURCE_FOLDER=$HOME/dotfiles 
 CONFIG_FOLDER=$HOME/.config
 
 FISH_FOLDER=$CONFIG_FOLDER/fish
@@ -18,7 +18,7 @@ STARSHIP_CONFIG=$CONFIG_FOLDER/starship.toml
 SSH_CONFIG=$SSH_FOLDER/config
 ZSH_FOLDER=$CONFIG_FOLDER/zsh
 
-for file in ".bashrc" ".vimrc" ".gitconfig" ".zshenv"
+for file in ".bashrc" ".vimrc" ".gitconfig" ".zshenv" ".hyper.js"
 do 
   if [ -f "$HOME/$file" ]; then
     rm "$HOME/$file"
