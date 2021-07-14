@@ -3,11 +3,11 @@ alias ll="exa -la --group-directories-first --git"
 alias la="exa -la --group-directories-first --git"
 alias ls="exa -la --group-directories-first --git"
 alias c="clear"
-
-abbr -a -g ... "cd ../.."
-
-abbr -a -g vim 'nvim'
-
+alias protoezy="cd ~/Code/react/protoezy.git/release-1"
+abbr -a -g ... "cd ../.."                              
+                                                       
+abbr -a -g vim 'nvim'                                  
+                                                       
 abbr -a -g rmi "rm -Rf"
 
 abbr -a -g start "yarn start"

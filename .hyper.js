@@ -2,7 +2,7 @@ module.exports = {
     config: {
         updateChannel: 'stable',
         fontSize: 12,
-        fontFamily: 'JetBrains Mono',
+        fontFamily: 'Hack NF',
         fontWeight: 'normal',
         fontWeightBold: 'bold',
         lineHeight: 1,
@@ -41,7 +41,7 @@ module.exports = {
             lightCyan: '#68FDFE',
             lightWhite: '#FFFFFF',
         },
-        shell: '/usr/bin/fish',
+        shell: '/usr/bin/zsh',
         shellArgs: [],
         env: {},
         bell: false,
