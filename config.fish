@@ -72,12 +72,12 @@ export PATH="$DENO_INSTALL/bin:$PATH"
 set -Up fish_user_paths ~/.cargo/bin
 set -U fish_greeting
 
-#function fish_prompt -d "Write out the prompt"
-#    set -g __fish_git_prompt_showupstream auto
-#    set -g __fish_git_prompt_char_stateseparator |
-#    set -g __fish_git_prompt_color blue
-#    set -g __fish_git_prompt_char_cleanstate ✔
-#    set -g __fish_git_prompt_char_dirtystate ✚
-#    set -g __fish_git_prompt_char_invalidstate ✖
-#    printf '%s%s%s%s%s' (set_color green) (prompt_pwd) (set_color blue) (fish_git_prompt) (set_color yellow) ' ﲹ ' 
-#end
+function fish_prompt -d "Write out the prompt"
+    set -g __fish_git_prompt_showupstream auto
+    set -g __fish_git_prompt_char_stateseparator |
+    set -g __fish_git_prompt_color blue
+    set -g __fish_git_prompt_char_cleanstate ✔
+    set -g __fish_git_prompt_char_dirtystate ✚
+    set -g __fish_git_prompt_char_invalidstate ✖
+    printf '%s%s%s%s%s' (set_color green) (prompt_pwd) (set_color blue) (fish_git_prompt) (set_color yellow) ' ﲹ ' 
+end
