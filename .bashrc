@@ -27,3 +27,4 @@ DARK_RED="\[\033[1;31m\]"
 NO_COLOR="\[\033[0m\]"
 
 export PS1="$BLUE\u@\h $RED\W \n$DARK_BLUE[\$(date +%k:%M:%S)] $DARK_RED$ $NO_COLOR"
+. "$HOME/.cargo/env"
