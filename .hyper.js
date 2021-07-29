@@ -2,7 +2,7 @@ module.exports = {
     config: {
         updateChannel: 'stable',
         fontSize: 12,
-        fontFamily: 'JetBrainsMono NF',
+        fontFamily: 'BlexMono NF',
         fontWeight: 'normal',
         fontWeightBold: 'bold',
         lineHeight: 1,

@@ -66,7 +66,7 @@ end
 function rmi --wraps rm --description 'alias rmi=rm -rf'
     rm -rf $argv
 end
-
+export BROWSER="/usr/bin/firefox-developer-edition"
 export DENO_INSTALL="/home/imran/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 set -Up fish_user_paths ~/.cargo/bin
@@ -79,5 +79,5 @@ function fish_prompt -d "Write out the prompt"
     set -g __fish_git_prompt_char_cleanstate ✔
     set -g __fish_git_prompt_char_dirtystate ✚
     set -g __fish_git_prompt_char_invalidstate ✖
-    printf '%s%s%s%s%s' (set_color green) (prompt_pwd) (set_color blue) (fish_git_prompt) (set_color yellow) ' ﲹ ' 
+    printf '%s%s%s' (set_color --bold green) (prompt_pwd) (set_color --bold blue) (fish_git_prompt) (set_color yellow) ' ﲹ ' 
 end
