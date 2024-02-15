@@ -1,7 +1,17 @@
 [user]
-	email = mohammed.imran@protoezy.com
+	email = mohammedimran86992@gmail.com
 	name = Mohammed Imran
 [init]
 	defaultBranch = main
 [pull]
 	resolve = only
+[push]
+	autoSetupRemote = true
+[init]
+	defaultBranch = main
+[gpg]
+	format = ssh
+[column]
+	ui = auto
+[branch]
+	sort = -committerdate
