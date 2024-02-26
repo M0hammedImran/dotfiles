@@ -1,6 +1,7 @@
 [user]
 	email = mohammedimran86992@gmail.com
 	name = Mohammed Imran
+	signingkey = /home/imran/.ssh/git.signing.pem
 [init]
 	defaultBranch = main
 [pull]
